@@ -2,10 +2,11 @@
 커밋한 파일이 python **black**과 **isort**로 PEP 8 형식에 맞게 자동으로 재작성해주도록 합니다. 해당 과정은 VSCODE 및 개인 환경에서 적용되었음을 사전에 밝힙니다.
 
 -----
-### 1. 생성한 프로젝트 Repository를 Clone
-'''bash
+### 1. 생성한 프로젝트 Repository를 VSCODE내에서 Clone
+```bash
 git clone SSH key
-'''
+```
+git clone을 진행해줬기 때문에 git init
 ### 2. git bash로 변경 후 가상 환경 실행
 ```bash
 conda init
@@ -62,4 +63,7 @@ PRINT()
 ```
 -----
 
-***위와 같이 적용된 것을 알 수 있습니다. 이후 추가적으로 commit을 진행하면 됩니다. 적용 후 status에 올라가서 자동으로 재커밋하는 작업은 진행 중에 있습니다.***
+***위와 같이 적용된 것을 알 수 있습니다. 이후 추가적으로 commit을 진행하면 됩니다.***
+
+### 시도 중
+***black과 isort 적용 후 status에 자동으로 올라가서 가장 최근 커밋메세지로 재커밋하는 작업은 진행 중에 있습니다.***
