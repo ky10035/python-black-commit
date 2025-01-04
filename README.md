@@ -5,6 +5,8 @@
 ### 1. 생성한 프로젝트 Repository를 VSCODE내에서 Clone
 ```bash
 git clone SSH key
+git remote -v
+git remote rename origin upstream
 ```
 git clone을 진행해줬기 때문에 git init
 ### 2. git bash로 변경 후 가상 환경 실행
