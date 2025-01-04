@@ -8,17 +8,13 @@ git clone SSH key
 git remote -v
 git remote rename origin upstream
 ```
-git clone을 진행해줬기 때문에 git init
-### 2. git bash로 변경 후 가상 환경 실행
-```bash
-conda init
-conda activate
-```
-### 3. pre-commit 설치 및 실행
+git clone을 진행해줬기 때문에 git init을 할 필요가 없습니다.
+### 3. pre-commit 설치
 ```bash
 pip install pre-commit
+pre-commit install
 ```
-### 4. 프로젝트 파일 내 .pre-commit-config.yaml 파일 추가
+### 4. 프로젝트 디렉토리 내 .pre-commit-config.yaml 파일 추가
 ```yaml
 repos:
   - repo: https://github.com/psf/black
@@ -33,10 +29,8 @@ repos:
       - id: isort
         name: isort (python)
 ```
-
------
-
-### 적용 이전 코드
+### 5. 포맷팅 적용할 파일 status에 추가 후 커밋 진행
+#### 적용 이전 코드
 ```python
 import pandas as pd
 print( "this is test file.")
@@ -48,7 +42,7 @@ def PRINT():
     print( test)
 PRINT( )
 ```
-### 적용 이후 코드
+#### 적용 이후 코드
 ```python
 import pandas as pd
 
@@ -65,7 +59,9 @@ PRINT()
 ```
 -----
 
-***위와 같이 commit을 했을 때 적용된 것을 알 수 있습니다. 이후 추가적으로 commit을 진행하면 됩니다.***
+***위와 같이 commit을 했을 때 적용된 것을 알 수 있습니다. 이후 status에 다시 추가하여 commit을 다시 진행하면 됩니다.***
 
 ### 시도 중
-***black과 isort 적용 후 status에 자동으로 올라가서 가장 최근 커밋메세지로 재커밋하는 작업은 진행 중에 있습니다.***
+***black과 isort 적용 후 status에 자동으로 올라가서 가장 최근 커밋메세지로 재커밋하는 작업은 시도도 중에 있습니다.***
+
+##### 최근 업데이트 : 250105
